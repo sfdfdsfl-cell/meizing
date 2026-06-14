@@ -7,9 +7,9 @@ import { useState, type MouseEvent } from "react";
 
 const links = [
   { label: "Home", href: "/", active: true },
-  { label: "About Us", href: "/#footer" },
-  { label: "Plan", href: "/#plans" },
-  { label: "Contact Us", href: "/#footer" },
+  { label: "About Us", href: "/about" },
+  { label: "Plan", href: "/plans" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 export default function Navbar() {

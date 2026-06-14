@@ -47,7 +47,7 @@ export default function Plans() {
     <section
       id="plans"
       aria-labelledby="plans-heading"
-      className="w-full scroll-mt-20 bg-linear-to-b from-[#d7dcf3] to-[#bfc7ed]"
+      className="w-full scroll-mt-20 bg-white"
     >
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <motion.h2
@@ -73,16 +73,20 @@ export default function Plans() {
             <motion.div
               key={plan.speed}
               variants={item}
-              className="flex flex-col rounded-2xl bg-white p-7 shadow-sm transition-shadow hover:shadow-lg"
+              className={`flex flex-col rounded-2xl border bg-slate-50 p-7 transition-shadow hover:shadow-lg ${
+                plan.popular
+                  ? "border-transparent ring-2 ring-indigo-500"
+                  : "border-slate-200"
+              }`}
             >
-              <p className="text-lg font-bold text-[#0b0b1a]">
-                {plan.speed}
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-lg font-bold text-[#0b0b1a]">{plan.speed}</p>
                 {plan.popular && (
-                  <span className="ml-2 align-middle text-sm font-semibold text-indigo-600">
+                  <span className="inline-flex items-center rounded-full bg-linear-to-r from-indigo-500 to-[#2d2be0] px-3 py-1 text-xs font-semibold text-white shadow-sm shadow-indigo-500/30">
                     Most popular
                   </span>
                 )}
-              </p>
+              </div>
               <p className="mt-3 text-sm leading-relaxed text-slate-500">
                 {plan.description}
               </p>

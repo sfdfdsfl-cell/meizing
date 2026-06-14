@@ -3,10 +3,10 @@ import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 const navLinks = [
-  { label: "Home", href: "#" },
-  { label: "Plan", href: "#" },
-  { label: "About Us", href: "#" },
-  { label: "Contact Us", href: "#" },
+  { label: "Home", href: "/" },
+  { label: "Plan", href: "/plans" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact Us", href: "/contact" },
 ];
 
 const offerings = [
@@ -71,12 +71,12 @@ export default function Footer() {
             <ul className="mt-4 space-y-3">
               {navLinks.map((link) => (
                 <li key={link.label}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-sm font-medium text-indigo-600 transition-colors hover:text-indigo-800"
                   >
                     {link.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

@@ -44,10 +44,7 @@ export default function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <section
-      aria-labelledby="faq-heading"
-      className="w-full bg-linear-to-b from-[#d7dcf3] to-[#bfc7ed]"
-    >
+    <section aria-labelledby="faq-heading" className="w-full bg-white">
       <div className="mx-auto grid max-w-6xl grid-cols-1 gap-10 px-6 pt-20 pb-24 sm:pt-24 md:grid-cols-[1fr_1.6fr] md:gap-16">
         <motion.h2
           id="faq-heading"

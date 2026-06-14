@@ -192,7 +192,7 @@ export default function FeatureCards() {
   };
 
   return (
-    <section aria-label="Key features" className="w-full bg-white">
+    <section aria-label="Key features" className="w-full bg-[#f0f1fc]">
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <motion.div
           variants={container}
