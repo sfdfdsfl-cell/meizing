@@ -2,11 +2,12 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, type MouseEvent } from "react";
 
 const links = [
-  { label: "Home", href: "/", active: true },
+  { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
   { label: "Plan", href: "/plans" },
   { label: "Contact Us", href: "/contact" },
@@ -14,6 +15,10 @@ const links = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  const isActive = (href: string) =>
+    href === "/" ? pathname === "/" : pathname.startsWith(href);
 
   const handleNavClick = (e: MouseEvent<HTMLAnchorElement>, href: string) => {
     setOpen(false);
@@ -52,7 +57,7 @@ export default function Navbar() {
                 href={link.href}
                 onClick={(e) => handleNavClick(e, link.href)}
                 className={`text-sm font-semibold uppercase tracking-wide transition-colors hover:text-indigo-600 ${
-                  link.active ? "text-indigo-600" : "text-[#0b0b1a]"
+                  isActive(link.href) ? "text-indigo-600" : "text-[#0b0b1a]"
                 }`}
               >
                 {link.label}
@@ -114,7 +119,7 @@ export default function Navbar() {
                     href={link.href}
                     onClick={(e) => handleNavClick(e, link.href)}
                     className={`block rounded-lg px-3 py-2.5 text-sm font-semibold uppercase tracking-wide transition-colors hover:bg-slate-50 ${
-                      link.active ? "text-indigo-600" : "text-[#0b0b1a]"
+                      isActive(link.href) ? "text-indigo-600" : "text-[#0b0b1a]"
                     }`}
                   >
                     {link.label}
