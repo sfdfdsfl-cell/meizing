@@ -111,10 +111,15 @@ export default function Footer() {
           {/* Contact */}
           <div>
             <h3 className="text-base font-bold text-[#0b0b1a]">Contact us</h3>
+            <p className="mt-4 text-sm font-semibold text-[#0b0b1a]">
+              MEZING BROADBAND PRIVATE LIMITED
+            </p>
+            <p className="mt-1 text-xs text-slate-500">
+              CIN: U63122MP2026PTC084113
+            </p>
             <address className="mt-4 text-sm not-italic leading-relaxed text-slate-500">
-              Purani Sadar Cantt,
-              <br />
-              Sagar, M. P. 470001
+              Plot N 77/1/1 Utkarsh Public School Area, Rani Durgawati Ward No.
+              1, Semrabag, Sagar, Madhya Pradesh, Pin: 470002 INDIA
             </address>
             <p className="mt-5 text-sm font-bold text-[#0b0b1a]">
               <a href="tel:+917389692807" className="hover:text-indigo-600">
