@@ -44,7 +44,7 @@ export default function Navbar() {
             alt="Mezing Broadband"
             width={646}
             height={109}
-            className="h-9 w-auto"
+            className="h-12 w-auto"
             priority
           />
         </Link>
@@ -82,7 +82,12 @@ export default function Navbar() {
           aria-expanded={open}
           className="flex h-10 w-10 items-center justify-center rounded-lg text-[#0b0b1a] hover:bg-slate-100 md:hidden"
         >
-          <svg viewBox="0 0 24 24" className="h-6 w-6" fill="none" aria-hidden="true">
+          <svg
+            viewBox="0 0 24 24"
+            className="h-6 w-6"
+            fill="none"
+            aria-hidden="true"
+          >
             {open ? (
               <path
                 d="M6 6l12 12M18 6 6 18"

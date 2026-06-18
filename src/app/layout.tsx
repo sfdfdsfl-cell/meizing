@@ -14,7 +14,7 @@ const siteUrl = "https://brodband.com";
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "Brodband — Hyper-fast Fiber Internet up to 1200 Mbps",
+    default: "Mezing Broadband – Hyper-Fast Fiber Internet & WiFi in Sagar",
     template: "%s | Brodband",
   },
   description:
