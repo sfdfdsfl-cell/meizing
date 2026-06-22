@@ -40,10 +40,10 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" aria-label="Mezing Broadband home">
           <Image
-            src="/logo.png"
+            src="/new_logo.jpg"
             alt="Mezing Broadband"
-            width={646}
-            height={109}
+            width={767}
+            height={299}
             className="h-12 w-auto"
             priority
           />

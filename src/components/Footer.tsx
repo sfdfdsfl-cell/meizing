@@ -32,11 +32,11 @@ export default function Footer() {
           {/* Brand + offerings */}
           <div>
             <Image
-              src="/logo.png"
+              src="/new_logo.jpg"
               alt="Mezing Broadband"
-              width={646}
-              height={109}
-              className="h-9 w-auto"
+              width={767}
+              height={299}
+              className="h-12 w-auto"
               priority
             />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-slate-500">
