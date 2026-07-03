@@ -61,7 +61,27 @@ export default function SupportArea() {
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    event.currentTarget.reset();
+    const form = event.currentTarget;
+    const data = new FormData(form);
+    const name = (data.get("name") ?? "").toString().trim();
+    const phone = (data.get("phone") ?? "").toString().trim();
+    const category = (data.get("category") ?? "").toString().trim();
+    const message = (data.get("message") ?? "").toString().trim();
+
+    const text =
+      `Hi, I'd like support.\n\n` +
+      `Name: ${name}\n` +
+      `Phone: ${phone}\n` +
+      `Issue Category: ${category}\n` +
+      `Issue: ${message}`;
+
+    window.open(
+      `https://wa.me/917389692807?text=${encodeURIComponent(text)}`,
+      "_blank",
+      "noopener,noreferrer",
+    );
+
+    form.reset();
     setSubmitted(true);
   };
 
@@ -215,7 +235,7 @@ export default function SupportArea() {
                       <span className="block text-sm font-semibold text-[#0b0b1a]">
                         {channel.title}
                       </span>
-                      <span className="block break-words text-xs text-slate-500">
+                      <span className="block wrap-break-word text-xs text-slate-500">
                         {channel.detail}
                       </span>
                     </span>
