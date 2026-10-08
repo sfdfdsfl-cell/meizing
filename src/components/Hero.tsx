@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
@@ -50,12 +51,12 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={0.3}>
-              <a
-                href="#"
+              <Link
+                href="/home-plans"
                 className="mt-8 inline-flex items-center justify-center rounded-full bg-[#2d2be0] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0]"
               >
                 Start Now
-              </a>
+              </Link>
             </Reveal>
           </div>
 

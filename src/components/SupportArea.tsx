@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { whatsappChatUrl } from "@/lib/site";
 import { motion, useReducedMotion } from "framer-motion";
 import {
   Phone,
@@ -39,7 +40,7 @@ const channels: Channel[] = [
     icon: MessageCircle,
     title: "Live web chat",
     detail: "Agents online",
-    href: "#",
+    href: whatsappChatUrl("Hi, I need help with my Mezing Broadband connection"),
     boxed: true,
   },
   {
@@ -76,7 +77,7 @@ export default function SupportArea() {
       `Issue: ${message}`;
 
     window.open(
-      `https://wa.me/917389692807?text=${encodeURIComponent(text)}`,
+      whatsappChatUrl(text),
       "_blank",
       "noopener,noreferrer",
     );

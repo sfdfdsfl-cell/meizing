@@ -1,10 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import Reveal from "@/components/Reveal";
+import { REFER_URL } from "@/lib/site";
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Plan", href: "/plans" },
+  { label: "Home Plans", href: "/home-plans" },
+  { label: "Business Plans", href: "/business-plans" },
+  { label: "All Plans", href: "/plans" },
+  { label: "Book a Connection", href: "/booking" },
   { label: "About Us", href: "/about" },
   { label: "Contact Us", href: "/contact" },
 ];
@@ -53,12 +57,12 @@ export default function Footer() {
               <ul className="mt-4 space-y-1.5">
                 {offerings.map((item) => (
                   <li key={item}>
-                    <a
-                      href="#"
+                    <Link
+                      href="/home-plans"
                       className="text-sm text-slate-500 transition-colors hover:text-indigo-600"
                     >
                       {item}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -82,8 +86,8 @@ export default function Footer() {
             </ul>
 
             <div className="mt-10 space-y-4">
-              <a
-                href="#"
+              <Link
+                href="/contact"
                 className="block max-w-xs rounded-xl border border-slate-300 px-5 py-4 transition-colors hover:border-indigo-400 hover:bg-indigo-50/40"
               >
                 <p className="flex items-center gap-2 text-sm font-semibold text-[#0b0b1a]">
@@ -93,9 +97,11 @@ export default function Footer() {
                 <p className="mt-1 text-xs text-slate-500">
                   Your feedback matters!
                 </p>
-              </a>
+              </Link>
               <a
-                href="#"
+                href={REFER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block max-w-xs rounded-xl border border-slate-300 px-5 py-4 transition-colors hover:border-indigo-400 hover:bg-indigo-50/40"
               >
                 <p className="text-sm font-semibold text-[#0b0b1a]">

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 const plans = [
@@ -94,12 +95,12 @@ export default function Plans() {
                 {plan.price}
                 <span className="font-medium text-slate-400">/Month</span>
               </p>
-              <a
-                href="#"
+              <Link
+                href="/home-plans"
                 className="mt-5 inline-flex w-fit items-center justify-center rounded-full bg-[#2d2be0] px-7 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0]"
               >
                 Get details
-              </a>
+              </Link>
             </motion.div>
           ))}
         </motion.div>

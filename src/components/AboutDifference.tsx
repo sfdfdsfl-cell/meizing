@@ -46,7 +46,11 @@ export default function AboutDifference() {
   };
 
   return (
-    <section aria-labelledby="difference-heading" className="w-full bg-[#f0f1fc]">
+    <section
+      id="our-difference"
+      aria-labelledby="difference-heading"
+      className="w-full scroll-mt-20 bg-[#f0f1fc]"
+    >
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <motion.div
           initial={{ opacity: 0, y: reduceMotion ? 0 : 20 }}

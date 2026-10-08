@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import WhatsappWidget from "@/components/WhatsappWidget";
+import { SITE_URL } from "@/lib/site";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -10,13 +11,11 @@ const spaceGrotesk = Space_Grotesk({
   display: "swap",
 });
 
-const siteUrl = "https://brodband.com";
-
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: "Mezing Broadband – Hyper-Fast Fiber Internet & WiFi in Sagar",
-    template: "%s | Brodband",
+    template: "%s | Mezing Broadband",
   },
   description:
     "Experience 100% pure fiber-optic internet with speeds up to 1200 Mbps. No contracts, no data caps, and 1.2 Gbps symmetrical speeds for ultimate performance. Now available in your area.",
@@ -30,9 +29,9 @@ export const metadata: Metadata = {
     "high speed internet",
     "gigabit internet",
   ],
-  authors: [{ name: "Brodband" }],
-  creator: "Brodband",
-  publisher: "Brodband",
+  authors: [{ name: "Mezing Broadband" }],
+  creator: "Mezing Broadband",
+  publisher: "Mezing Broadband",
   alternates: {
     canonical: "/",
   },
@@ -46,26 +45,26 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: siteUrl,
-    title: "Brodband — Hyper-fast Fiber Internet up to 1200 Mbps",
+    url: SITE_URL,
+    title: "Mezing Broadband — Hyper-fast Fiber Internet up to 1200 Mbps",
     description:
       "100% pure fiber-optic internet with speeds up to 1200 Mbps. No contracts, no data caps. Now available in your area.",
-    siteName: "Brodband",
+    siteName: "Mezing Broadband",
     images: [
       {
-        url: "/hero_bg.png",
-        width: 1200,
-        height: 630,
-        alt: "Brodband hyper-fast fiber internet",
+        url: "/plans_hero.png",
+        width: 1440,
+        height: 662,
+        alt: "Mezing Broadband hyper-fast fiber internet",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Brodband — Hyper-fast Fiber Internet up to 1200 Mbps",
+    title: "Mezing Broadband — Hyper-fast Fiber Internet up to 1200 Mbps",
     description:
       "100% pure fiber-optic internet with speeds up to 1200 Mbps. No contracts, no data caps.",
-    images: ["/hero_bg.png"],
+    images: ["/plans_hero.png"],
   },
   robots: {
     index: true,

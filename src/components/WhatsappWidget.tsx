@@ -4,10 +4,10 @@ import Image from "next/image";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { X } from "lucide-react";
+import { whatsappChatUrl } from "@/lib/site";
 
-const PHONE = "917389692807";
 const MESSAGE = "hii i want to know more";
-const chatUrl = `https://wa.me/${PHONE}?text=${encodeURIComponent(MESSAGE)}`;
+const chatUrl = whatsappChatUrl(MESSAGE);
 
 export default function WhatsappWidget() {
   const [open, setOpen] = useState(false);

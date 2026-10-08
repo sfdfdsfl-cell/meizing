@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export default function AboutCta() {
@@ -28,18 +29,18 @@ export default function AboutCta() {
 
         <Reveal delay={0.2}>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <a
-              href="#footer"
+            <Link
+              href="/booking"
               className="inline-flex w-full items-center justify-center rounded-full bg-white px-8 py-3.5 text-sm font-semibold text-[#1b34c4] shadow-lg transition-colors hover:bg-slate-100 sm:w-auto"
             >
               Check Availability
-            </a>
-            <a
-              href="#footer"
+            </Link>
+            <Link
+              href="/contact"
               className="inline-flex w-full items-center justify-center rounded-full border border-white/70 px-8 py-3.5 text-sm font-semibold text-white transition-colors hover:bg-white/10 sm:w-auto"
             >
               Contact Sales
-            </a>
+            </Link>
           </div>
         </Reveal>
       </div>

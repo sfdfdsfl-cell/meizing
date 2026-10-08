@@ -5,11 +5,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState, type MouseEvent } from "react";
+import { CUSTOMER_LOGIN_URL } from "@/lib/site";
+
 
 const links = [
   { label: "Home", href: "/" },
   { label: "About Us", href: "/about" },
-  { label: "Plan", href: "/plans" },
+  { label: "Home Plans", href: "/home-plans" },
+  { label: "Business Plans", href: "/business-plans" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -68,7 +71,7 @@ export default function Navbar() {
 
         {/* Desktop CTA */}
         <a
-          href="#"
+          href={CUSTOMER_LOGIN_URL}
           className="hidden rounded-full bg-[#2d2be0] px-6 py-2.5 text-sm font-semibold text-white shadow-md shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] md:inline-flex"
         >
           Customer Login
@@ -133,7 +136,7 @@ export default function Navbar() {
               ))}
               <li className="mt-2">
                 <a
-                  href="#"
+                  href={CUSTOMER_LOGIN_URL}
                   onClick={() => setOpen(false)}
                   className="block rounded-full bg-[#2d2be0] px-6 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-[#2018c4]"
                 >

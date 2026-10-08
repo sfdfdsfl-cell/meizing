@@ -27,7 +27,12 @@ const faqs = [
   },
 ];
 
-export default function PlansFaq() {
+export default function PlansFaq({
+  tone = "slate",
+}: {
+  /** Background of the question buttons. */
+  tone?: "slate" | "indigo";
+}) {
   const reduceMotion = useReducedMotion();
   const [openItems, setOpenItems] = useState<number[]>([0, 1, 2, 3]);
 
@@ -68,7 +73,11 @@ export default function PlansFaq() {
                     type="button"
                     onClick={() => toggle(index)}
                     aria-expanded={isOpen}
-                    className="flex w-full items-center justify-between gap-4 rounded-lg bg-slate-100 px-5 py-4 text-left transition-colors hover:bg-slate-200/70"
+                    className={`flex w-full items-center justify-between gap-4 rounded-lg px-5 py-4 text-left transition-colors ${
+                      tone === "indigo"
+                        ? "bg-[#e6e8fa] hover:bg-[#dcdff7]"
+                        : "bg-slate-100 hover:bg-slate-200/70"
+                    }`}
                   >
                     <span className="text-sm font-bold text-[#0b0b1a] sm:text-base">
                       {faq.question}

@@ -1,6 +1,8 @@
+import Link from "next/link";
 import Image from "next/image";
 import { Phone, Share2 } from "lucide-react";
 import Reveal from "@/components/Reveal";
+import { REFER_URL } from "@/lib/site";
 
 export default function ContactHero() {
   return (
@@ -58,12 +60,12 @@ export default function ContactHero() {
                 Join the fiber revolution. Fill out our simplified request form
                 and get installed within 48 hours.
               </p>
-              <a
-                href="#footer"
+              <Link
+                href="/booking"
                 className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-[#2d2be0] px-7 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0]"
               >
                 Start Application
-              </a>
+              </Link>
             </div>
           </Reveal>
 
@@ -82,7 +84,9 @@ export default function ContactHero() {
                 on your next bill!
               </p>
               <a
-                href="#footer"
+                href={REFER_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-[#2d2be0] px-7 py-3 text-sm font-semibold text-white shadow-md shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0]"
               >
                 Send invite

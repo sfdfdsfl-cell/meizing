@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Gauge } from "lucide-react";
 import Reveal from "@/components/Reveal";
 
@@ -31,12 +32,12 @@ export default function SpeedBand() {
             The speed is consistently fast, even during peak times when everyone
             is online. We offer the fastest gigabit network available.
           </p>
-          <a
-            href="#start"
+          <Link
+            href="/home-plans"
             className="mt-6 inline-flex items-center justify-center rounded-full bg-[#2d2be0] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0]"
           >
             Start Now
-          </a>
+          </Link>
         </Reveal>
       </div>
     </section>

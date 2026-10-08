@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export default function CtaSection() {
@@ -17,18 +18,18 @@ export default function CtaSection() {
               fiber optics.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-              <a
-                href="#"
+              <Link
+                href="/booking"
                 className="inline-flex w-full items-center justify-center rounded-full border border-indigo-300 bg-white px-8 py-3 text-sm font-semibold text-indigo-600 transition-colors hover:bg-indigo-50 sm:w-auto"
               >
                 Get fibre today
-              </a>
-              <a
-                href="/#footer"
+              </Link>
+              <Link
+                href="/contact"
                 className="inline-flex w-full items-center justify-center rounded-full bg-[#2d2be0] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0] sm:w-auto"
               >
-                Contact sale
-              </a>
+                Contact sales
+              </Link>
             </div>
           </div>
         </Reveal>

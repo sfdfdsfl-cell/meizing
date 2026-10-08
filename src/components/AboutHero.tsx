@@ -47,13 +47,13 @@ export default function AboutHero() {
         <Reveal delay={0.3}>
           <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link
-              href="/plans"
+              href="/home-plans"
               className="inline-flex w-full items-center justify-center rounded-full bg-[#2d2be0] px-8 py-3.5 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0] sm:w-auto"
             >
               View Our Plans
             </Link>
             <a
-              href="#infrastructure"
+              href="#our-difference"
               className="inline-flex w-full items-center justify-center rounded-full border border-slate-300 bg-white px-8 py-3.5 text-sm font-semibold text-[#0b0b1a] transition-colors hover:bg-slate-50 sm:w-auto"
             >
               Our Infrastructure

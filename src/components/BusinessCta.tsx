@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Reveal from "@/components/Reveal";
 
 export default function BusinessCta() {
@@ -17,12 +18,12 @@ export default function BusinessCta() {
               dedicated support, static IPs, and service level agreements.
             </p>
             <div className="mt-8 flex justify-center">
-              <a
-                href="/#footer"
+              <Link
+                href="/business-plans"
                 className="inline-flex w-full items-center justify-center rounded-full bg-[#2d2be0] px-8 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-500/30 transition-colors hover:bg-[#2018c4] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0] sm:w-auto"
               >
-                Contact Sales
-              </a>
+                Explore Business Plans
+              </Link>
             </div>
           </div>
         </Reveal>
