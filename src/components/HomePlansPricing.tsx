@@ -5,37 +5,31 @@ import HomePlanCard, {
   type PlanApp,
 } from "@/components/HomePlanCard";
 
+// Square app icons: shown edge to edge with no extra tile background.
+const appIcon = { tileClass: "", imageClass: "object-cover" };
+
 const apps = {
   hotstar: {
     name: "JioHotstar",
-    src: "/ott-marquee/hotstar.png",
-    width: 256,
-    height: 144,
-    tileClass: "bg-linear-to-br from-[#1a6dff] via-[#8a2be2] to-[#ff2d6f]",
-    imageClass: "object-contain scale-125",
+    src: "/JIO.png",
+    width: 447,
+    height: 447,
+    ...appIcon,
   },
-  zee5: {
-    name: "ZEE5",
-    src: "/ott-marquee/zee5.png",
-    width: 144,
-    height: 144,
-    tileClass: "bg-black p-0.5",
-  },
+  zee5: { name: "ZEE5", src: "/Z5.png", width: 894, height: 894, ...appIcon },
   prime: {
     name: "Prime Video",
-    src: "/ott-marquee/prime.png",
-    width: 205,
-    height: 128,
-    tileClass: "bg-[#1a98ff] p-1.5",
-    imageClass: "object-contain brightness-0 invert",
+    src: "/PRIME.png",
+    width: 512,
+    height: 512,
+    ...appIcon,
   },
   liv: {
     name: "Sony LIV",
-    src: "/ott-marquee/liv.png",
-    width: 144,
-    height: 144,
-    tileClass: "bg-black",
-    imageClass: "object-cover",
+    src: "/Sonyliv.png",
+    width: 500,
+    height: 500,
+    ...appIcon,
   },
 } satisfies Record<string, PlanApp>;
 
@@ -52,7 +46,7 @@ const bundlePlans: HomePlan[] = [
     price: "599",
     description:
       "Perfect for casual streaming on a single screen with essential apps.",
-    includedApps: [apps.hotstar, apps.zee5, apps.prime],
+    includedApps: [apps.liv, apps.hotstar, apps.zee5],
     moreApps: 10,
   },
   {
@@ -67,12 +61,12 @@ const bundlePlans: HomePlan[] = [
   },
   {
     tier: "Ultimate Entertainment",
-    speed: 200,
-    price: "1,199",
+    speed: 300,
+    price: "1,599",
     description:
       "The complete entertainment powerhouse with 4K streaming and all premium platforms.",
-    includedApps: [apps.liv, apps.hotstar, apps.zee5],
-    moreApps: 11,
+    includedApps: [apps.liv, apps.hotstar, apps.zee5, apps.prime],
+    moreApps: 10,
   },
 ];
 
@@ -110,7 +104,9 @@ function NoteBar({
         </span>
         <div>
           <p className="text-sm font-semibold text-[#0b0b1a]">{title}</p>
-          <p className="mt-0.5 text-xs leading-relaxed text-slate-500">{body}</p>
+          <p className="mt-0.5 text-xs leading-relaxed text-slate-500">
+            {body}
+          </p>
         </div>
       </div>
       <span className="inline-flex shrink-0 items-center gap-2 self-start rounded-md bg-indigo-50 px-3 py-1.5 text-xs font-medium text-indigo-700 sm:self-auto">
@@ -126,7 +122,7 @@ export default function HomePlansPricing() {
     <section
       id="home-plans"
       aria-labelledby="home-plans-heading"
-      className="w-full scroll-mt-20 bg-white"
+      className="w-full scroll-mt-28 bg-white"
     >
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <Reveal className="text-center">

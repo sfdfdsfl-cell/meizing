@@ -15,16 +15,18 @@
  */
 export const GOOGLE_FORM = {
   actionUrl:
-    "https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/formResponse",
+    "https://docs.google.com/forms/d/e/1FAIpQLScdd9L0cqx-1uEo0GPrSAYS1p2yOXG60WaKOM3-z9RyY0-V8A/formResponse",
   fields: {
-    fullName: "entry.0000000001",
-    mobile: "entry.0000000002",
-    email: "entry.0000000003",
-    address: "entry.0000000004",
-    plan: "entry.0000000005",
-    consent: "entry.0000000006",
+    fullName: "entry.1518952323",
+    mobile: "entry.75780493",
+    email: "entry.1520887950",
+    address: "entry.2072132646",
+    // Optional: add these questions to the form and paste their entry IDs.
+    // While `plan` is null, the selected plan is appended to the address.
+    plan: null as string | null,
+    consent: null as string | null,
   },
-} as const;
+};
 
 export type BookingDetails = {
   fullName: string;
@@ -44,9 +46,18 @@ export function buildBookingPayload(details: BookingDetails) {
   payload.append(fields.fullName, details.fullName.trim());
   payload.append(fields.mobile, `+91 ${details.mobile}`);
   payload.append(fields.email, details.email.trim());
-  payload.append(fields.address, details.address.trim());
-  payload.append(fields.plan, details.plan || "Not selected");
-  payload.append(fields.consent, details.consent ? "Yes" : "No");
+  const plan = details.plan || "Not selected";
+  payload.append(
+    fields.address,
+    fields.plan
+      ? details.address.trim()
+      : `${details.address.trim()}
+
+Selected plan: ${plan}`,
+  );
+  if (fields.plan) payload.append(fields.plan, plan);
+  if (fields.consent)
+    payload.append(fields.consent, details.consent ? "Yes" : "No");
   return payload;
 }
 

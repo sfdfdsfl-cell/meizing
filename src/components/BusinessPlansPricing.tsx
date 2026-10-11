@@ -43,7 +43,7 @@ export default function BusinessPlansPricing() {
     <section
       id="business-plans"
       aria-labelledby="business-pricing-heading"
-      className="w-full scroll-mt-20 bg-white"
+      className="w-full scroll-mt-28 bg-white"
     >
       <div className="mx-auto max-w-6xl px-6 py-20 sm:py-24">
         <Reveal className="text-center">

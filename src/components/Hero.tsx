@@ -2,12 +2,6 @@ import Link from "next/link";
 import Image from "next/image";
 import Reveal from "@/components/Reveal";
 
-const partners = [
-  { src: "/bsnl.png", alt: "BSNL", width: 136, height: 56 },
-  { src: "/railwire.png", alt: "RailWire Express Network", width: 91, height: 56 },
-  { src: "/railtel.png", alt: "RailTel", width: 144, height: 56 },
-];
-
 export default function Hero() {
   return (
     <section
@@ -24,13 +18,13 @@ export default function Hero() {
         className="pointer-events-none absolute -bottom-40 -left-40 h-112 w-md rounded-full bg-[#9a8df0]/35 blur-3xl"
       />
 
-      <div className="relative z-10 mx-auto flex min-h-[calc(100vh-4.5rem)] max-w-6xl flex-col justify-center px-6 py-12 lg:py-16">
+      <div className="relative z-10 mx-auto flex min-h-[calc(100svh-6.75rem)] max-w-6xl flex-col justify-center px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 items-center gap-10 lg:grid-cols-2 lg:gap-14">
           {/* Left: copy */}
           <div className="flex flex-col items-start text-left">
             <Reveal>
-              <span className="inline-flex items-center rounded-full border border-indigo-200 bg-white/70 px-4 py-1.5 text-[0.625rem] font-semibold uppercase tracking-[0.15em] text-indigo-600 backdrop-blur-sm sm:text-xs">
-                Now available in your area
+              <span className="inline-flex items-center rounded-full border border-indigo-500 bg-white/70 px-3 py-1 text-[0.6875rem] font-semibold text-indigo-700 backdrop-blur-sm sm:text-xs">
+                Next-Gen Optical Fiber Network
               </span>
             </Reveal>
 
@@ -43,10 +37,17 @@ export default function Hero() {
             </Reveal>
 
             <Reveal delay={0.2}>
-              <p className="mt-5 max-w-md text-base leading-relaxed text-slate-600 sm:text-lg">
-                Experience the power of 100% pure fiber-optic technology. No
-                contracts, no data caps, and 1.2 gbps symmetrical speeds for
-                ultimate performance.
+              <p className="mt-5 max-w-lg text-base leading-relaxed text-slate-600 sm:text-lg">
+                Experience the power of{" "}
+                <strong className="font-semibold text-[#0b0b1a]">
+                  100% pure fiber-optic technology
+                </strong>{" "}
+                with no contracts, no data caps, reliable high-speed internet,
+                transparent pricing, and{" "}
+                <strong className="font-semibold text-[#0b0b1a]">
+                  no hidden fees
+                </strong>{" "}
+                perfect for your home or business.
               </p>
             </Reveal>
 
@@ -75,24 +76,6 @@ export default function Hero() {
           </Reveal>
         </div>
 
-        {/* Partners */}
-        <Reveal delay={0.2} className="mt-14 lg:mt-16">
-          <p className="text-center text-xs font-semibold tracking-wide text-slate-500">
-            Authorized Last Mile Partner
-          </p>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-12 gap-y-6">
-            {partners.map((partner) => (
-              <Image
-                key={partner.alt}
-                src={partner.src}
-                alt={partner.alt}
-                width={partner.width}
-                height={partner.height}
-                className="h-9 w-auto object-contain sm:h-10"
-              />
-            ))}
-          </div>
-        </Reveal>
       </div>
     </section>
   );

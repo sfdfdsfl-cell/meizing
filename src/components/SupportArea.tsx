@@ -32,8 +32,8 @@ const channels: Channel[] = [
   {
     icon: Mail,
     title: "Email Support",
-    detail: "mezingconsultants@gmail.com",
-    href: "mailto:mezingconsultants@gmail.com",
+    detail: "support@mezingbroadband.com",
+    href: "mailto:support@mezingbroadband.com",
     boxed: true,
   },
   {

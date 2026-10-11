@@ -217,10 +217,10 @@ export default function PrivacyPolicyPage() {
               <li>
                 Emailing us at:{" "}
                 <a
-                  href="mailto:mezingconsultants@gmail.com"
+                  href="mailto:support@mezingbroadband.com"
                   className="font-medium text-indigo-600 hover:text-indigo-800"
                 >
-                  mezingconsultants@gmail.com
+                  support@mezingbroadband.com
                 </a>
               </li>
             </ul>
@@ -273,10 +273,10 @@ export default function PrivacyPolicyPage() {
             <p className="mt-1 leading-relaxed text-slate-600">
               Email us at:{" "}
               <a
-                href="mailto:mezingconsultants@gmail.com"
+                href="mailto:support@mezingbroadband.com"
                 className="font-semibold text-indigo-600 hover:text-indigo-800"
               >
-                mezingconsultants@gmail.com
+                support@mezingbroadband.com
               </a>
             </p>
           </section>

@@ -163,7 +163,7 @@ export default function HomePlanCard({ plan }: { plan: HomePlan }) {
             aria-haspopup="dialog"
             className="flex w-full items-center justify-center rounded-full border border-[#2d2be0] px-4 py-2.5 text-sm font-semibold text-[#2d2be0] transition-colors duration-300 group-hover:bg-[#2d2be0] group-hover:text-white hover:bg-[#2018c4]! focus-visible:bg-[#2d2be0] focus-visible:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#2d2be0]"
           >
-            Get Started
+            Select Plan
           </button>
         </div>
       </div>

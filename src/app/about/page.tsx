@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import AboutHero from "@/components/AboutHero";
-import AboutPartners from "@/components/AboutPartners";
 import AboutJourney from "@/components/AboutJourney";
 import Timeline from "@/components/Timeline";
 import AboutDifference from "@/components/AboutDifference";
@@ -23,7 +22,6 @@ export default function AboutPage() {
       <Navbar />
       <main className="flex flex-1 flex-col">
         <AboutHero />
-        <AboutPartners />
         <AboutJourney />
         <Timeline />
         <AboutDifference />

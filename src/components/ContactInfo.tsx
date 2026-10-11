@@ -16,8 +16,8 @@ const cards: {
     lines: [
       { text: "+91 7389692807", href: "tel:+917389692807" },
       {
-        text: "mezingconsultants@gmail.com",
-        href: "mailto:mezingconsultants@gmail.com",
+        text: "support@mezingbroadband.com",
+        href: "mailto:support@mezingbroadband.com",
       },
     ],
   },
@@ -27,8 +27,8 @@ const cards: {
     lines: [
       { text: "+91 7389692807", href: "tel:+917389692807" },
       {
-        text: "mezingconsultants@gmail.com",
-        href: "mailto:mezingconsultants@gmail.com",
+        text: "support@mezingbroadband.com",
+        href: "mailto:support@mezingbroadband.com",
       },
     ],
   },
