@@ -21,7 +21,7 @@ const usageOptions = [
 ];
 
 /** Speeds (Mbps) we actually sell, ascending. */
-const availableSpeeds = [30, 50, 100, 200, 300, 500, 1000, 1200];
+const availableSpeeds = [30, 50, 100, 300, 500, 1000, 1200];
 
 function recommendSpeed(deviceIndex: number, usage: string[]) {
   const needed =
@@ -213,8 +213,8 @@ export default function PlanFinder() {
               <p className="mt-4 text-xs leading-relaxed text-slate-500">
                 Based on your selections, we recommend a plan with at least{" "}
                 {speedLabel}
-                {ott ? " plus an OTT bundle" : ""} to support your household&apos;s
-                devices and streaming needs seamlessly.
+                {ott ? " plus an OTT bundle" : ""} to support your
+                household&apos;s devices and streaming needs seamlessly.
               </p>
 
               <div className="mt-auto flex flex-col gap-3 pt-8">
