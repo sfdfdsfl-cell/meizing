@@ -8,7 +8,7 @@ import Reveal from "@/components/Reveal";
 
 const deviceOptions = [
   { label: "1 - 3", base: 30 },
-  { label: "3 - 5", base: 50 },
+  { label: "3 - 5", base: 100 },
   { label: "5+", base: 100 },
 ];
 
